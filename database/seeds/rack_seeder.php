@@ -11,18 +11,18 @@ class rack_seeder extends Seeder {
      */
     public function run() {
         DB::table('racks')->insert([
-            'name' => 'English Rack',
+            'name' => 'English',
         ]);
 
         DB::table('racks')->insert([
-            'name' => 'Arabic Rack',
+            'name' => 'Arabic',
         ]);
         DB::table('racks')->insert([
-            'name' => 'French Rack',
+            'name' => 'French',
         ]);
 
         DB::table('racks')->insert([
-            'name' => 'Urdu Rack'
+            'name' => 'Urdu'
         ]);
     }
 

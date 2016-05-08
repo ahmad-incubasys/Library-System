@@ -17,7 +17,10 @@ class CreateBooksTable extends Migration
             $table->string('title');
             $table->string('author');
             $table->string('published_year');
-            $table->integer('rack_id');
+            $table->integer('rack_id')->unsigned();
+            $table->timestamps();
+            
+            $table->foreign('rack_id')->references('id')->on('books')->onDelete('cascade');
         });
     }
 

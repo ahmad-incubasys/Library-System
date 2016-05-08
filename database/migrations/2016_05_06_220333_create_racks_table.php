@@ -15,6 +15,7 @@ class CreateRacksTable extends Migration
         Schema::create('racks', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('name');
+            $table->timestamps();
         });
     }
 
