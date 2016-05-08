@@ -27,5 +27,5 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('rack', 'RackController');
 
-    Route::get('/user/logout', 'Auth\AuthController@getLogout');
+    Route::get('user/logout', 'Auth\AuthController@getLogout');
 });
