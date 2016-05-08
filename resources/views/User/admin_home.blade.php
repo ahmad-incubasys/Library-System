@@ -46,7 +46,7 @@ if (Session::has('msg')) {
             </li>
             <li>
                 <label>Rack in which you want to insert book</label>
-                <select name="rack_id" class="field-select">
+                <select name="rack_id" class="field-select" required>
                     @if (count($racks))
                     @foreach($racks as $rack)
                     <option value="{{$rack->id}}">{{$rack->name}}</option>>

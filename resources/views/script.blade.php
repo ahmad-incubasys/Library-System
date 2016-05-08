@@ -85,17 +85,17 @@
                                     book_data += "<td>" + msg[i]['title'] + " </td>";
                                     book_data += "<td>" + msg[i]['author'] + "</td>";
                                     book_data += "<td>" + msg[i]['published_year'] + "</td>";
-                                    book_data += "<td><form method='POST' action='{{url('book')}}/"+msg[i]['id']+"'> <a href='{{url('/book')}}/" + msg[i]['id'] + "/edit'>edit</a><input type='hidden' name='_token' id='csrf-token' value='{{ csrf_token() }}'/><input type='hidden' name='_method' value='DELETE'> <input class='submitLink' type='submit' value='delete'> </form></td>";
-                                    
-                                    
-                                    
+                                    book_data += "<td><form method='POST' action='{{url('book')}}/" + msg[i]['id'] + "'> <a href='{{url('/book')}}/" + msg[i]['id'] + "/edit'>edit</a><input type='hidden' name='_token' id='csrf-token' value='{{ csrf_token() }}'/><input type='hidden' name='_method' value='DELETE'> <input class='submitLink' type='submit' value='delete'> </form></td>";
+
+
+
                                     book_data += "</tr>";
                                 }
                                 $("#rack_books_tbody").html(book_data);
                             }
-//                        else {
-//                            alert('no result found');
-//                        }
+                            else {
+                                sweetAlert("No Books in this Rack", "", "error");
+                            }
                         }
                     });
                 }

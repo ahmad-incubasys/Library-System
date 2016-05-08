@@ -27,6 +27,7 @@ class BookController extends Controller {
         $book = new books;
         $is_book_found = $book->get_book_in_same_rack();
         if ($is_book_found) {
+            Session::put('msg', 'Selected Rack has already this book.');
             return redirect('/user/admin_home');
         } else {
             $rack_limit = $book->get_rack_books();
